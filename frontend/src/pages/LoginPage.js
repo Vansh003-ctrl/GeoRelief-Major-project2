@@ -19,7 +19,7 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             // ✅ Backend ke login route par POST request bhejenge
-            const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+            const res = await axios.post('https://georelief.onrender.com/api/auth/login', formData);
 
             console.log("Response from backend:", res.data);
             

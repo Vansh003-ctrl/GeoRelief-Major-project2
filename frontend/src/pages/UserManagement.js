@@ -19,7 +19,7 @@ const UserManagement = () => {
             'x-auth-token': token
           }
         };
-        const res = await axios.get('http://localhost:5000/api/users', config);
+        const res = await axios.get('https://georelief.onrender.com/api/users', config);
         setUsers(res.data);
       } catch (err) {
         console.error(err);
@@ -49,7 +49,7 @@ const UserManagement = () => {
             'x-auth-token': token
           }
         };
-        await axios.delete(`http://localhost:5000/api/users/${userId}`, config);
+        await axios.delete(`https://georelief.onrender.com/api/users/${userId}`, config);
         setUsers(users.filter(user => user._id !== userId));
         alert('User deleted successfully!');
       } catch (err) {
@@ -79,7 +79,7 @@ const UserManagement = () => {
 
     if (isEditing) {
       await axios.put(
-        `http://localhost:5000/api/users/${currentUser._id}`,
+        `https://georelief.onrender.com/api/users/${currentUser._id}`,
         { role: currentUser.role },
         config
       );
@@ -88,7 +88,7 @@ const UserManagement = () => {
       ));
     } else {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://georelief.onrender.com/api/auth/register",
         currentUser,
         config
       );

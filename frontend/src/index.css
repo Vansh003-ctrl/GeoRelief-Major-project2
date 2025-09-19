@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.stats-card-hover {
+  /* Transition ko normal state mein rakhein, smooth animation ke liye */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  cursor: pointer; /* Cursor ko pointer banaye */
+}
+
+.stats-card-hover:hover {
+  /* Hover par yeh styles lagengay */
+  transform: translateY(-5px) !important; /* Card thoda upar uthega */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* Bada shadow aayega */
+}
+
+.stories-card-hover {
+  /* Transition ko normal state mein rakhein, smooth animation ke liye */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  cursor: pointer; /* Cursor ko pointer banaye */
+}
+
+.stories-card-hover:hover {
+  /* Hover par yeh styles lagengay */
+  transform: translateY(-5px) !important; /* Card thoda upar uthega */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* Bada shadow aayega */
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}

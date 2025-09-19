@@ -23,7 +23,7 @@ const ResourceManagement = () => {
         const token = localStorage.getItem("token");
         const config = { headers: { "x-auth-token": token } };
 
-        const res = await axios.get("http://localhost:5000/api/resources", config);
+        const res = await axios.get(" https://georelief-major-project2.onrender.com/api/resources", config);
         setResources(res.data);
       } catch (err) {
         console.error("Error fetching resources:", err.response?.data || err.message);
@@ -64,7 +64,7 @@ const ResourceManagement = () => {
       if (isEditing) {
         // 🔹 Update resource
         const res = await axios.put(
-          `http://localhost:5000/api/resources/${editingId}`,
+          ` https://georelief-major-project2.onrender.com/api/resources/${editingId}`,
           newResource,
           config
         );
@@ -74,7 +74,7 @@ const ResourceManagement = () => {
       } else {
         // 🔹 Add new resource
         const res = await axios.post(
-          "http://localhost:5000/api/resources",
+          " https://georelief-major-project2.onrender.com/api/resources",
           newResource,
           config
         );
@@ -103,7 +103,7 @@ const ResourceManagement = () => {
       const token = localStorage.getItem("token");
       const config = { headers: { "x-auth-token": token } };
 
-      await axios.delete(`http://localhost:5000/api/resources/${id}`, config);
+      await axios.delete(` https://georelief-major-project2.onrender.com/api/resources/${id}`, config);
       setResources(resources.filter(r => r._id !== id));
       alert("Resource deleted successfully!");
     } catch (err) {

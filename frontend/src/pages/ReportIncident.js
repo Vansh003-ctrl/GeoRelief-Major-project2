@@ -35,7 +35,7 @@ const ReportIncident = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://georelief.onrender.com/api/incidents', formData);
+      const res = await axios.post('http://localhost:5000/api/incidents', formData);
       
       console.log('Incident reported:', res.data);
       alert('Incident reported successfully!');

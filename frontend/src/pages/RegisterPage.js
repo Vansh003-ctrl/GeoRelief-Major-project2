@@ -21,7 +21,7 @@ const RegisterPage = () => {
         e.preventDefault();
         try {
             // ✅ Backend se token aur user data lene ki request
-            const res = await axios.post('https://georelief.onrender.com/api/auth/register', formData);
+            const res = await axios.post('http://localhost:5000/api/auth/register', formData);
             
             // ✅ Registration successful hone par token aur name ko localStorage mein save karein
             localStorage.setItem('token', res.data.token);

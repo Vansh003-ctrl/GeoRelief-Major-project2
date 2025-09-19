@@ -117,7 +117,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchIncidents = async () => {
       try {
-        const res = await axios.get("https://georelief.onrender.com/api/incidents");
+        const res = await axios.get("http://localhost:5000/api/incidents");
         setIncidents(res.data);
 
         // Stats ko update karein

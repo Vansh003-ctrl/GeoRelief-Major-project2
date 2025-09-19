@@ -19,7 +19,7 @@ const UserManagement = () => {
             'x-auth-token': token
           }
         };
-        const res = await axios.get('https://georelief.onrender.com/api/users', config);
+        const res = await axios.get('http://localhost:5000/api/users', config);
         setUsers(res.data);
       } catch (err) {
         console.error(err);
